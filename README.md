@@ -13,15 +13,3 @@ I'm Meagan Alfaro, a Computer Science student with a passion for building beauti
 - **UI Libraries:** [Insert if you're using Semantic UI, ShadCN, etc.]
 - **Hosting:** [e.g., GitHub Pages, Netlify, Vercel]
 
-## 📁 Project Structure
-
-  root
-  │
-  ├── public/ # Static assets
-  ├── src/
-  │ ├── components/ # Reusable UI components
-  │ ├── pages/ # Home, About, Projects, etc.
-  │ └── styles/ # Global styles, themes
-  ├── README.md
-  └── package.json
-
