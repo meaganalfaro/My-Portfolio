@@ -20,19 +20,8 @@ This portfolio is a living document of my journey, showcasing my projects, skill
 - **UI:** ShadCN / Semantic UI (or whatever you’re using)  
 - **Hosting:** [Vercel](https://vercel.com/) / GitHub Pages (update accordingly)
 
-## 🧪 Getting Started
-
-To run this project locally:
-
-```bash
-git clone https://github.com/meaganalfaro/portfolio.git
-cd portfolio
-npm install
-npm run dev
-
 ## 🚀 Live Site
 Check it out here: https://meaganalfaro.dev
-Or wherever your portfolio is hosted!
 
 ## 🖤 Acknowledgements
 Inspired by modern design, bold UI, and the ✨ cinematic ✨
