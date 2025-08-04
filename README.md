@@ -1,15 +1,42 @@
-# 💫 Meagan Alfaro — Portfolio
+# 🌐 Meagan Alfaro — Personal Portfolio
 
-Welcome to the source code of my personal portfolio site — a digital space that showcases my work, skills, and style.
+Welcome to the source code of my digital portfolio — a reflection of who I am, what I build, and where I’m headed.
 
-## ✨ About
+## 👩‍💻 About Me
 
-I'm Meagan Alfaro, a Computer Science student with a passion for building beautiful and functional things. My interests span product development, frontend design, machine learning, and aesthetic technology. This portfolio reflects my technical skills, creative projects, and evolving journey in tech.
+I'm Meagan Alfaro — a Computer Science student and product development intern with a passion for bold design, clean code, and building technology that leaves an impression. My work bridges creativity and technical precision, with interests in:
 
-## 🛠 Tech Stack
+- 💡 Product development & UX/UI
+- 🧠 Machine learning & AI
+- 🎨 Aesthetic engineering & digital branding
 
-- **Frontend:** React, TypeScript, Vite
-- **Styling:** Tailwind CSS / Styled Components (specify what you're using)
-- **UI Libraries:** [Insert if you're using Semantic UI, ShadCN, etc.]
-- **Hosting:** [e.g., GitHub Pages, Netlify, Vercel]
+This portfolio is a living document of my journey, showcasing my projects, skillset, and design sensibility.
 
+## ⚙️ Tech Stack
+
+- **Framework:** React + TypeScript  
+- **Styling:** Tailwind CSS + custom themes  
+- **Bundler:** Vite  
+- **UI:** ShadCN / Semantic UI (or whatever you’re using)  
+- **Hosting:** [Vercel](https://vercel.com/) / GitHub Pages (update accordingly)
+
+## 🧪 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/meaganalfaro/portfolio.git
+cd portfolio
+npm install
+npm run dev
+
+## 🚀 Live Site
+Check it out here: https://meaganalfaro.dev
+Or wherever your portfolio is hosted!
+
+## 🖤 Acknowledgements
+Inspired by modern design, bold UI, and the ✨ cinematic ✨
+
+Powered by playlists on loop
+
+Built with love and a tiny dash of obsession
