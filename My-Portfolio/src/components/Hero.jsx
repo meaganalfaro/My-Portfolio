@@ -30,7 +30,7 @@ const Hero = () => {
             <a href="https://linkedin.com/in/meaganalfaro" target="_blank" rel="noopener noreferrer" className="hero-link">
               LinkedIn
             </a>
-            <a href="/resume" className="hero-link">
+            <a href="MeaganAlfaroYear4.pdf" target="_blank" rel="noopener noreferrer" className="hero-link">
               Resume
             </a>
             <a href="https://github.com/meaganalfaro" target="_blank" rel="noopener noreferrer" className="hero-link">
