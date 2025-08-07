@@ -1,0 +1,31 @@
+/* White Chapel Font Face Definitions */
+
+@font-face {
+  font-family: 'White Chapel';
+  src: url('../white_capel/WhiteCapel.woff') format('woff'),
+       url('../white_capel/WhiteCapel.ttf') format('truetype'),
+       url('../white_capel/WhiteCapel.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'White Chapel';
+  src: url('../white_capel/WhiteCapel.woff') format('woff'),
+       url('../white_capel/WhiteCapel.ttf') format('truetype'),
+       url('../white_capel/WhiteCapel.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'White Chapel';
+  src: url('../white_capel/WhiteCapel.woff') format('woff'),
+       url('../white_capel/WhiteCapel.ttf') format('truetype'),
+       url('../white_capel/WhiteCapel.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+} 

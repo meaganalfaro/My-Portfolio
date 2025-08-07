@@ -1,0 +1,360 @@
+/* ==========================================================================
+   DESIGN SYSTEM - PORTFOLIO STYLE GUIDE
+   ========================================================================== */
+
+/* Font Families - Must be at the top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('../assets/fonts/WhiteChapel.css');
+
+/* ==========================================================================
+   COLOR PALETTE
+   ========================================================================== */
+
+:root {
+  /* Primary Colors - Ombre Effects */
+  --color-ombre-pink: #E22797;      /* PART OF OMBRE FOR BUTTONS + AURA BALLS */
+  --color-ombre-orange: #EF512C;    /* PART OF OMBRE FOR BUTTONS */
+  --color-ombre-peach: #FD9651;     /* IN THE OMBRE FOR LINKS */
+  
+  /* Header and Typography Colors */
+  --color-header-blue: #2012BF;     /* COLOR FOR HEADER FONTS + IN THE AURA BALLS */
+  --color-aura-purple: #AF70FF;     /* COLOR FOR AURA BALLS */
+  --color-subheading-lime: #E3FA63; /* FOR MAIN SUBHEADINGS + LINKS */
+  --color-body-blue: #4762FE;       /* TEXT FOR BODY */
+  
+  /* Background and UI Colors */
+  --color-shadow-beige: #FCE9D2;    /* FOR SHADOWS ON STARS */
+  --color-text-on-dark: #00B4D8;    /* Text on Dark backgrounds */
+  --color-constellation-white: #FFFFFF; /* FOR CONSTELLATION + STARS */
+  --color-heading-lavender: #E8EAF6; /* FOR MAIN HEADING, BUTTONS FONT, FONT ON DARK */
+  
+  /* Semantic Color Aliases */
+  --color-primary: var(--color-ombre-pink);
+  --color-secondary: var(--color-ombre-orange);
+  --color-accent: var(--color-subheading-lime);
+  --color-text-primary: var(--color-body-blue);
+  --color-text-secondary: var(--color-heading-lavender);
+  --color-background-light: var(--color-constellation-white);
+  --color-background-dark: var(--color-header-blue);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+:root {
+  /* Font Families */
+  --font-family-heading: 'White Chapel', 'Playfair Display', serif;    /* headings */
+  --font-family-subheading: 'DM Serif Text', serif;    /* Subheadings */
+  --font-family-body: 'Inter', sans-serif;             /* buttons/body */
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITY CLASSES
+   ========================================================================== */
+
+/* Heading Styles */
+.heading-primary {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-header-blue);
+  line-height: var(--line-height-tight);
+}
+
+.heading-secondary {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-header-blue);
+  line-height: var(--line-height-tight);
+}
+
+.heading-tertiary {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-header-blue);
+  line-height: var(--line-height-tight);
+}
+
+/* Subheading Styles */
+.subheading-primary {
+  font-family: var(--font-family-subheading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-subheading-lime);
+  line-height: var(--line-height-normal);
+}
+
+.subheading-secondary {
+  font-family: var(--font-family-subheading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-subheading-lime);
+  line-height: var(--line-height-normal);
+}
+
+/* Body Text Styles */
+.body-text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-body-blue);
+  line-height: var(--line-height-normal);
+}
+
+.body-text-small {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-body-blue);
+  line-height: var(--line-height-normal);
+}
+
+/* Link Styles */
+.link-primary {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-ombre-peach);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-primary:hover {
+  color: var(--color-ombre-orange);
+}
+
+.link-secondary {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-subheading-lime);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-secondary:hover {
+  color: var(--color-ombre-pink);
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+.btn {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-ombre-pink), var(--color-ombre-orange));
+  color: var(--color-heading-lavender);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-ombre-orange), var(--color-ombre-pink));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(226, 39, 151, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-ombre-orange), var(--color-ombre-peach));
+  color: var(--color-heading-lavender);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, var(--color-ombre-peach), var(--color-ombre-orange));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 81, 44, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-ombre-pink);
+  border: 2px solid var(--color-ombre-pink);
+}
+
+.btn-outline:hover {
+  background: var(--color-ombre-pink);
+  color: var(--color-heading-lavender);
+}
+
+/* ==========================================================================
+   AURA BALLS AND SPECIAL EFFECTS
+   ========================================================================== */
+
+.aura-ball {
+  background: radial-gradient(circle, var(--color-aura-purple), var(--color-header-blue));
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(175, 112, 255, 0.6);
+  animation: aura-float 3s ease-in-out infinite;
+}
+
+.aura-ball-pink {
+  background: radial-gradient(circle, var(--color-ombre-pink), var(--color-ombre-orange));
+  box-shadow: 0 0 20px rgba(226, 39, 151, 0.6);
+}
+
+@keyframes aura-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================================================================
+   CONSTELLATION AND STARS
+   ========================================================================== */
+
+.star {
+  background-color: var(--color-constellation-white);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.star-shadow {
+  background-color: var(--color-shadow-beige);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.constellation-line {
+  background: linear-gradient(90deg, var(--color-constellation-white), transparent);
+  height: 1px;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   LAYOUT AND SPACING
+   ========================================================================== */
+
+:root {
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/* Text Colors */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.text-header { color: var(--color-header-blue); }
+.text-body { color: var(--color-body-blue); }
+.text-lavender { color: var(--color-heading-lavender); }
+
+/* Background Colors */
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-header { background-color: var(--color-header-blue); }
+.bg-lavender { background-color: var(--color-heading-lavender); }
+.bg-white { background-color: var(--color-constellation-white); }
+
+/* Spacing Utilities */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .heading-primary {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .heading-secondary {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .subheading-primary {
+    font-size: var(--font-size-lg);
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-primary {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .heading-secondary {
+    font-size: var(--font-size-xl);
+  }
+  
+  .subheading-primary {
+    font-size: var(--font-size-base);
+  }
+} 
