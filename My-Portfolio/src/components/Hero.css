@@ -185,10 +185,6 @@
   z-index: 2;
 }
 
-.profile-image:hover {
-  transform: scale(1.02);
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-container {
