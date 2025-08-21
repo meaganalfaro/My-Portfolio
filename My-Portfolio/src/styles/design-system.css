@@ -183,7 +183,7 @@
 
 .btn-primary {
   background: linear-gradient(135deg, var(--color-ombre-pink), var(--color-ombre-orange));
-  color: var(--color-heading-lavender);
+  color: var(--color-constellation-white);
 }
 
 .btn-primary:hover {
