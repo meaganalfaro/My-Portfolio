@@ -108,7 +108,7 @@
   border-radius: 50px;
   background: linear-gradient(135deg, var(--color-ombre-orange), var(--color-ombre-pink));
   border: none;
-  color: var(--color-heading-lavender);
+  color: var(--color-constellation-white) !important;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 

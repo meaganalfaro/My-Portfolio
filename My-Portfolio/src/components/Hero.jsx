@@ -38,9 +38,9 @@ const Hero = () => {
             </a>
           </div>
 
-          <button className="btn btn-primary hero-cta">
+          <a href="#projects" className="hero-cta">
             PROJECTS
-          </button>
+          </a>
         </div>
       </div>
     </section>
