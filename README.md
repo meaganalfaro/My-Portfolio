@@ -14,7 +14,7 @@ This portfolio is a living document of my journey, showcasing my projects, skill
 
 ## ⚙️ Tech Stack
 
-- **Framework:** React + TypeScript  
+- **Framework:** React + JavaScript  
 - **Styling:** Tailwind CSS + custom themes  
 - **Bundler:** Vite  
 - **UI:** ShadCN / Semantic UI (or whatever you’re using)  
