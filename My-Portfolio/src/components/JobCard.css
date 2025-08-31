@@ -1,0 +1,127 @@
+.job-card {
+  background: linear-gradient(135deg, var(--color-ombre-peach), var(--color-ombre-pink));
+  border-radius: 30px;
+  padding: 2px;
+  max-width: 400px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  text-align: left;
+  border: none;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.9)), 
+              url('../assets/images/new-background.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 28px;
+  z-index: 1;
+}
+
+.job-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+.job-title {
+  color: var(--color-subheading-lime);
+  font-family: var(--font-family-subheading);
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-family: var(--font-family-subheading);
+}
+
+.company-name {
+  color: var(--color-constellation-white);
+  font-family: var(--font-family-subheading);
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.dates {
+  color: var(--color-constellation-white);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.description {
+  color:  var(--color-constellation-white);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.description ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  text-align: left;
+}
+
+.description li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-card {
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+  
+  .job-title {
+    font-size: 1.3rem;
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+  }
+  
+  .dates {
+    font-size: 0.9rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    max-width: 300px;
+    padding: 1.25rem;
+  }
+  
+  .job-title {
+    font-size: 1.2rem;
+  }
+  
+  .company-name {
+    font-size: 1rem;
+  }
+  
+  .dates {
+    font-size: 0.85rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+  }
+}
+
