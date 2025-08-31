@@ -1,0 +1,260 @@
+.constellation-container {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 2;
+}
+
+/* Cosmic Background */
+.cosmic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  animation: nebulaFloat 20s ease-in-out infinite;
+}
+
+.nebula-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.4) 0%, rgba(255, 107, 107, 0) 70%);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.nebula-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 0%, rgba(138, 43, 226, 0) 70%);
+  top: 60%;
+  right: 15%;
+  animation-delay: 7s;
+}
+
+.nebula-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(64, 224, 208, 0.4) 0%, rgba(64, 224, 208, 0) 70%);
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 14s;
+}
+
+/* Constellation SVG Container */
+.constellation-svg-container {
+  position: relative;
+  max-width: 3000px;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.constellation-image {
+  width: 100%;
+  max-width: 3000px;
+  height: auto;
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Recreated Constellation Stars - Beautiful Beige Glow Effect */
+.constellation-star {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 8px var(--color-shadow-beige),
+    0 0 16px var(--color-shadow-beige),
+    0 0 24px var(--color-shadow-beige);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.constellation-star:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 
+    0 0 12px var(--color-shadow-beige),
+    0 0 20px var(--color-shadow-beige),
+    0 0 28px var(--color-shadow-beige);
+}
+
+/* Job Card Popup - Absolute Position (stays in place when scrolling) */
+.job-card-popup-fixed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+/* Keep the old class for backward compatibility */
+.job-card-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+/* Animations */
+@keyframes nebulaFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .constellation-svg-container {
+    padding: 0.5rem; /* Reduced from 1rem */
+  }
+  
+  .constellation-image {
+    max-width: 600px; /* Smaller on tablets */
+  }
+  
+  .constellation-star {
+    width: 20px; /* Smaller on tablets */
+    height: 20px; /* Smaller on tablets */
+    box-shadow: 
+      0 0 4px var(--color-shadow-beige),
+      0 0 8px var(--color-shadow-beige),
+      0 0 12px var(--color-shadow-beige);
+  }
+  
+  .constellation-star:hover {
+    box-shadow: 
+      0 0 3px var(--color-shadow-beige),
+      0 0 6px var(--color-shadow-beige),
+      0 0 9px var(--color-shadow-beige),
+      0 0 12px var(--color-shadow-beige);
+  }
+}
+
+@media (max-width: 480px) {
+  .constellation-svg-container {
+    padding: 0.25rem; /* Reduced from 0.5rem */
+  }
+  
+  .constellation-image {
+    max-width: 400px; /* Smaller on mobile */
+  }
+  
+  .constellation-star {
+    width: 18px; /* Smaller on mobile */
+    height: 18px; /* Smaller on mobile */
+    box-shadow: 
+      0 0 3px var(--color-shadow-beige),
+      0 0 6px var(--color-shadow-beige),
+      0 0 9px var(--color-shadow-beige);
+  }
+  
+  .constellation-star:hover {
+    box-shadow: 
+      0 0 2px var(--color-shadow-beige),
+      0 0 4px var(--color-shadow-beige),
+      0 0 6px var(--color-shadow-beige),
+      0 0 8px var(--color-shadow-beige);
+  }
+}
+
+/* Responsive star sizes */
+@media (max-width: 1024px) {
+  .constellation-star {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .constellation-star {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .constellation-star {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Responsive adjustments for constellation container */
+@media (max-width: 1024px) {
+  .constellation-svg-container {
+    max-width: 2500px;
+    padding: 1.5rem;
+  }
+  
+  .constellation-image {
+    max-width: 2500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .constellation-svg-container {
+    max-width: 2000px;
+    padding: 1rem;
+  }
+  
+  .constellation-image {
+    max-width: 2000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .constellation-svg-container {
+    max-width: 1500px;
+    padding: 0.5rem;
+  }
+  
+  .constellation-image {
+    max-width: 1500px;
+  }
+}

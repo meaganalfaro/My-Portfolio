@@ -5,9 +5,9 @@ import Home from './pages/Home'
 import AboutMe from './pages/AboutMe'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
+import Experience from './pages/Experience'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
       <AboutMe />
       <Skills />
       <Projects />
+      <Experience />
     </>
   )
 }
