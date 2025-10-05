@@ -3,6 +3,7 @@
   border-radius: 30px;
   padding: 2px;
   max-width: 400px;
+  width: 100%;
   min-height: 300px;
   max-height: 400px;
   position: relative;
@@ -11,6 +12,7 @@
   border: none;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .job-card::before {
@@ -130,14 +132,15 @@
 
 @media (max-width: 480px) {
   .job-card {
-    max-width: 280px;
-    min-height: 260px;
-    max-height: 280px;
-    padding: 1.25rem;
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+    padding: 2px;
   }
   
   .job-card-content {
-    padding: 0.6rem;
+    padding: 0.75rem;
   }
   
   .job-title {

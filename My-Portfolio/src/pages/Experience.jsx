@@ -66,7 +66,7 @@ const Experience = () => {
     <section id="experience" className="experience-section">
       <div className="experience-container">
         <h2 className="experience-heading">Experience</h2>
-        <p className="experience-subtitle">My professional journey through the stars</p>
+        <p className="experience-subtitle">Click to view my professional journey through the stars</p>
         <div className="constellation-section">
           <Constellation jobs={jobs} />
         </div>

@@ -83,7 +83,7 @@ const Skills = () => {
     {
       title: 'Problem Solving',
       imageSrc: '/src/assets/skills/problem-solving.svg',
-      glowColor: 'var(--color-aura-purple)'
+      glowColor: 'var(--color-ombre-pink)'
     },
   ];
 

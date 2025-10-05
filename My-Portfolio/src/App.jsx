@@ -6,6 +6,7 @@ import AboutMe from './pages/AboutMe'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import Experience from './pages/Experience'
+import ContactMe from './pages/ContactMe'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
+      <ContactMe />
     </>
   )
 }

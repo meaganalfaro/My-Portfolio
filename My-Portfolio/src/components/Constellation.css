@@ -9,7 +9,7 @@
   background: transparent;
   border: none;
   outline: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* Cosmic Background */
@@ -65,7 +65,7 @@
   background: transparent;
   border: none;
   outline: none;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +96,7 @@
     0 0 16px var(--color-shadow-beige),
     0 0 24px var(--color-shadow-beige);
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 3;
 }
 
 .constellation-star:hover {
@@ -107,15 +107,62 @@
     0 0 28px var(--color-shadow-beige);
 }
 
-/* Job Card Popup - Absolute Position (stays in place when scrolling) */
+/* Job Card Popup - Positioned over star on web, centered on mobile */
 .job-card-popup-fixed {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 9999;
   animation: popupFadeIn 0.3s ease-out;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
 }
+
+/* Web positioning - cards positioned directly over stars with viewport protection */
+@media (min-width: 769px) {
+  .job-card-popup-fixed {
+    /* Positioning handled by JavaScript inline styles */
+    /* Add viewport protection for edge cases */
+    max-width: min(400px, 30vw);
+  }
+  
+  /* Prevent cards from going off-screen on the right */
+  .job-card-popup-fixed[style*="left: 9"] {
+    left: 85% !important;
+  }
+  
+  .job-card-popup-fixed[style*="left: 8"] {
+    left: 80% !important;
+  }
+  
+  /* Prevent cards from going off-screen on the left */
+  .job-card-popup-fixed[style*="left: 1"] {
+    left: 15% !important;
+  }
+  
+  .job-card-popup-fixed[style*="left: 2"] {
+    left: 20% !important;
+  }
+}
+
+/* Mobile phone specific - ensure perfect centering and proper sizing */
+@media (max-width: 480px) {
+  .job-card-popup-fixed {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 85vw !important;
+    width: 85vw !important;
+    padding: 0.75rem !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
 
 /* Keep the old class for backward compatibility */
 .job-card-popup {
@@ -123,7 +170,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 9999;
   animation: popupFadeIn 0.3s ease-out;
 }
 
