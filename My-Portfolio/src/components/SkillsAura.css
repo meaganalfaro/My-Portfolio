@@ -11,7 +11,7 @@
 .aura-ball {
   position: relative;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--color-constellation-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,7 @@
 /* Title Text */
 .aura-title {
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -73,76 +73,139 @@
 
 /* Size Variants */
 .skills-aura--small .aura-ball {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .skills-aura--small .aura-title {
-  font-size: 0.75rem;
-}
-
-.skills-aura--medium .aura-ball {
-  width: 120px;
-  height: 120px;
-}
-
-.skills-aura--medium .aura-title {
   font-size: 0.875rem;
 }
 
-.skills-aura--large .aura-ball {
-  width: 160px;
-  height: 160px;
+.skills-aura--medium .aura-ball {
+  width: 150px;
+  height: 150px;
 }
 
-.skills-aura--large .aura-title {
+.skills-aura--medium .aura-title {
   font-size: 1rem;
 }
 
-.skills-aura--xlarge .aura-ball {
+.skills-aura--large .aura-ball {
   width: 200px;
   height: 200px;
 }
 
-.skills-aura--xlarge .aura-title {
+.skills-aura--large .aura-title {
   font-size: 1.125rem;
+}
+
+.skills-aura--xlarge .aura-ball {
+  width: 240px;
+  height: 240px;
+}
+
+.skills-aura--xlarge .aura-title {
+  font-size: 1.25rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .skills-aura--medium .aura-ball {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .skills-aura--large .aura-ball {
     width: 120px;
     height: 120px;
   }
   
+  .skills-aura--large .aura-ball {
+    width: 150px;
+    height: 150px;
+  }
+  
   .skills-aura--xlarge .aura-ball {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
+  .skills-aura--small .aura-ball {
+    width: 60px;
+    height: 60px;
+  }
+  
   .skills-aura--medium .aura-ball {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .skills-aura--large .aura-ball {
     width: 80px;
     height: 80px;
   }
   
-  .skills-aura--large .aura-ball {
-    width: 100px;
-    height: 100px;
-  }
-  
   .skills-aura--xlarge .aura-ball {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
   }
   
   .aura-title {
+    font-size: 0.65rem;
+  }
+  
+  .skills-aura--small .aura-title {
+    font-size: 0.6rem;
+  }
+  
+  .skills-aura--medium .aura-title {
+    font-size: 0.65rem;
+  }
+  
+  .skills-aura--large .aura-title {
+    font-size: 0.7rem;
+  }
+  
+  .skills-aura--xlarge .aura-title {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-aura--small .aura-ball {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .skills-aura--medium .aura-ball {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .skills-aura--large .aura-ball {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .skills-aura--xlarge .aura-ball {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .aura-title {
+    font-size: 0.6rem;
+  }
+  
+  .skills-aura--small .aura-title {
+    font-size: 0.55rem;
+  }
+  
+  .skills-aura--medium .aura-title {
+    font-size: 0.6rem;
+  }
+  
+  .skills-aura--large .aura-title {
+    font-size: 0.65rem;
+  }
+  
+  .skills-aura--xlarge .aura-title {
+    font-size: 0.7rem;
   }
 }

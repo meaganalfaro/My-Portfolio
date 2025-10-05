@@ -6,7 +6,13 @@ import '../styles/design-system.css';
 
 const Constellation = ({ jobs }) => {
   const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedStarPosition, setSelectedStarPosition] = useState(null);
   const constellationRef = useRef(null);
+  
+  // Check if device is mobile phone (screen width <= 480px)
+  const isMobilePhone = () => {
+    return window.innerWidth <= 480;
+  };
 
   // Dynamically generate star positions based on the number of jobs
   // This makes it automatically scalable when you add more jobs
@@ -48,11 +54,13 @@ const Constellation = ({ jobs }) => {
 
   const starPositions = generateStarPositions(jobs);
 
-  const handleStarClick = (jobId) => {
+  const handleStarClick = (jobId, starPosition) => {
     if (selectedJob === jobId) {
       setSelectedJob(null);
+      setSelectedStarPosition(null);
     } else {
       setSelectedJob(jobId);
+      setSelectedStarPosition(starPosition);
     }
   };
 
@@ -74,6 +82,7 @@ const Constellation = ({ jobs }) => {
       // If we get here, the click is either outside the container or on empty space inside
       // Close the job card
       setSelectedJob(null);
+      setSelectedStarPosition(null);
     };
 
     if (selectedJob !== null) {
@@ -101,6 +110,8 @@ const Constellation = ({ jobs }) => {
       left: `${((star.left + offsetX) / svgWidth) * 100}%`
     };
   };
+
+
 
   return (
     <div className="constellation-container" ref={constellationRef}>
@@ -131,15 +142,33 @@ const Constellation = ({ jobs }) => {
                 left: position.left,
                 '--glow-color': star.glowColor
               }}
-              onClick={() => handleStarClick(star.jobId)}
+              onClick={() => handleStarClick(star.jobId, position)}
             />
           );
         })}
       </div>
 
-      {/* Job Card Popup - Fixed Position */}
+      {/* Job Card Popup - Positioned directly over stars on web, centered on mobile phones */}
       {selectedJob !== null && (
-        <div className="job-card-popup-fixed">
+        <div 
+          className="job-card-popup-fixed"
+          style={isMobilePhone() ? {
+            // Always center on mobile phones
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
+          } : selectedStarPosition ? {
+            // Position over star on web/tablet
+            top: selectedStarPosition.top,
+            left: selectedStarPosition.left,
+            transform: 'translate(-50%, -50%)'
+          } : {
+            // Fallback center
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+        >
           <JobCard
             jobTitle={jobs[selectedJob].title}
             company={jobs[selectedJob].company}

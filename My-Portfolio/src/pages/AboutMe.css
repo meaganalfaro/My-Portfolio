@@ -26,12 +26,8 @@
   background-repeat: no-repeat;
   backdrop-filter: blur(30px);
   border-radius: 30px;
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  max-width: 900px;
+  padding: 4rem;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
@@ -50,10 +46,10 @@
 
 .about-heading {
   font-family: var(--font-family-subheading);
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-header-blue);
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
   text-align: left;
   letter-spacing: -0.02em;
   position: relative;
@@ -63,7 +59,7 @@
 .about-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   position: relative;
   z-index: 2;
   text-align: left;
@@ -71,7 +67,7 @@
 
 .about-paragraph {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
   color: var(--color-body-blue);
   line-height: var(--line-height-relaxed);

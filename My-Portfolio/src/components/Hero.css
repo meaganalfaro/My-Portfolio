@@ -27,14 +27,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5rem;
-  max-width: 600px;
+  gap: 1rem;
+  max-width: 700px;
   text-align: left;
 }
 
 .hero-name {
   font-family: var(--font-family-heading);
-  font-size: 4rem;
+  font-size: 5.5rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-heading-lavender);
   margin: 0;
@@ -47,25 +47,25 @@
 
 .hero-tagline {
   font-family: var(--font-family-subheading);
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: var(--font-weight-normal);
   color: var(--color-subheading-lime);
   margin: 0;
   line-height: 1.4;
-  max-width: 500px;
+  max-width: 600px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 0.25rem;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
   justify-content: flex-start;
 }
 
 .hero-link {
   font-family: var(--font-family-body);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: var(--font-weight-medium);
   background: linear-gradient(135deg, var(--color-subheading-lime), var(--color-ombre-peach));
   -webkit-background-clip: text;
@@ -74,7 +74,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
 }
 
 .hero-link:hover {
@@ -101,9 +101,9 @@
 }
 
 .hero-cta {
-  margin-top: 0.5rem;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
   font-weight: var(--font-weight-semibold);
   border-radius: 50px;
   background: linear-gradient(135deg, var(--color-ombre-orange), var(--color-ombre-pink));
@@ -150,8 +150,8 @@
 }
 
 .profile-frame {
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 375px;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 
