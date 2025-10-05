@@ -16,12 +16,11 @@ This portfolio is a living document of my journey, showcasing my projects, skill
 
 - **Framework:** React + JavaScript  
 - **Styling:** Tailwind CSS + custom themes  
-- **Bundler:** Vite  
-- **UI:** ShadCN / Semantic UI (or whatever you’re using)  
-- **Hosting:** [Vercel](https://vercel.com/) / GitHub Pages (update accordingly)
+- **Bundler:** Vite    
+- **Hosting:** Self Hosting
 
 ## 🚀 Live Site
-Check it out here: https://meaganalfaro.dev
+Check it out here: https://malfaro.com
 
 ## 🖤 Acknowledgements
 Inspired by modern design, bold UI, and the ✨ cinematic ✨
