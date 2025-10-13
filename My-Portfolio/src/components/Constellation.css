@@ -148,22 +148,6 @@
   }
 }
 
-/* Mobile phone specific - ensure perfect centering and proper sizing */
-@media (max-width: 480px) {
-  .job-card-popup-fixed {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    max-width: 85vw !important;
-    width: 85vw !important;
-    padding: 0.75rem !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-}
-
-
 /* Keep the old class for backward compatibility */
 .job-card-popup {
   position: fixed;

@@ -13,7 +13,7 @@ app.use(express.json());
 
 // 2) Allow your site to call the API (adjust ports if your client runs elsewhere)
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://yourdomain.com']
+  origin: ['https://malfaro.com']
 }));
 
 // 3) Resend client
