@@ -17,7 +17,7 @@
 
 .contact-heading {
   font-family: var(--font-family-subheading);
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-constellation-white) !important;
   margin: 0 0 1rem 0;
@@ -30,8 +30,8 @@
 
 .contact-subtitle {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
   color: var(--color-subheading-lime);
   margin: 0 0 3rem 0;
   line-height: 1.4;

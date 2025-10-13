@@ -14,7 +14,7 @@
   min-height: 550px;
   border-radius: 30px;
   overflow: hidden;
-  background: url('../assets/images/alt-background.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../assets/images/alt-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 .form-label {
   color: var(--color-header-blue);
   font-family: var(--font-family-subheading);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-semibold);
   text-align: left;
 }
@@ -61,7 +61,7 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-constellation-white);
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
 }
@@ -163,13 +163,13 @@
 
 .notification.success {
   background: rgba(34, 197, 94, 0.15);
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: rgba(26, 133, 65, 0.752);
   color: var(--color-constellation-white);
 }
 
 .notification.error {
   background: rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.4);
+  border-color: rgba(241, 35, 35, 0.614);
   color: var(--color-constellation-white);
 }
 
@@ -242,7 +242,7 @@
   }
   
   .form-label {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
   }
   
   .form-input,
@@ -284,7 +284,7 @@
   }
   
   .form-label {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
   }
   
   .form-input,
@@ -331,7 +331,7 @@
   }
   
   .form-label {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
   }
   
   .form-input,

@@ -68,7 +68,7 @@
 .about-paragraph {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-medium);
   color: var(--color-body-blue);
   line-height: var(--line-height-relaxed);
   margin: 0;

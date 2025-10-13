@@ -23,7 +23,7 @@ function AboutMe() {
                         </p>
                         
                         <p className="about-paragraph">
-                            When I'm not coding, you'll probably find me lifting weights or spending time with my dog, Vienna.
+                            When I'm not coding, you'll probably find me lifting weights or spending time with my dog. Rumor has it she is hiding somewhere on this site!
                         </p>
                     </div>
                 </div>
