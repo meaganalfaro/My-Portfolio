@@ -1,6 +1,6 @@
 import React from 'react';
 import './JobCard.css';
-import '../assets/images/new-background.png';
+import '/images/new-background.png';
 
 const JobCard = ({ jobTitle, company, dates, description, isVisible }) => {
   if (!isVisible) return null;

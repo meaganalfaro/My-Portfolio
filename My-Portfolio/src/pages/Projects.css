@@ -20,7 +20,7 @@
 }
 
 .projects-container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../assets/images/alt-background.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('/images/alt-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

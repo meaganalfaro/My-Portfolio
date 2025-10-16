@@ -23,7 +23,7 @@
   right: 2px;
   bottom: 2px;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.9)), 
-              url('../assets/images/new-background.png');
+              url('/images/new-background.png');
   background-size: cover;
   background-position: center;
   border-radius: 28px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import altBackground from '../assets/images/alt-background.png';
+import altBackground from '/images/alt-background.png';
 import './AboutMe.css';
 
 function AboutMe() {

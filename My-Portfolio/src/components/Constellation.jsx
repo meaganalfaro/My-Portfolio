@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import JobCard from './JobCard';
-import constellationSvg from '../assets/experience/constellation.svg';
+import constellationSvg from '/images/constellation.svg';
 import './Constellation.css';
 import '../styles/design-system.css';
 

@@ -20,7 +20,7 @@
 }
 
 .about-container {
-  background-image: url('../assets/images/alt-background.png');
+  background-image: url('/images/alt-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
