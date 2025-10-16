@@ -7,82 +7,82 @@ const Skills = () => {
   const skills = [
     {
       title: 'React',
-      imageSrc: '/src/assets/skills/react.svg',
+      imageSrc: '/skills/react.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
     {
       title: 'JavaScript',
-      imageSrc: '/src/assets/skills/javascript.svg',
+      imageSrc: '/skills/javascript.svg',
       glowColor: 'var(--color-header-blue)'
     },
     {
       title: 'Collaboration',
-      imageSrc: '/src/assets/skills/collaboration.svg',
+      imageSrc: '/skills/collaboration.svg',
       glowColor: 'var(--color-aura-purple)'
     },
     {
       title: 'Java',
-      imageSrc: '/src/assets/skills/java.svg',
+      imageSrc: '/skills/java.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
     {
       title: 'CoreUI',
-      imageSrc: '/src/assets/skills/core-ui.svg',
+      imageSrc: '/skills/core-ui.svg',
       glowColor: 'var(--color-header-blue)'
     },
     {
       title: 'Scikit-learn',
-      imageSrc: '/src/assets/skills/scikit-learn.svg',
+      imageSrc: '/skills/scikit-learn.svg',
       glowColor: 'var(--color-aura-purple)'
     },
     {
       title: 'Pandas',
-      imageSrc: '/src/assets/skills/pandas.svg',
+      imageSrc: '/skills/pandas.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
     {
       title: 'Communication',
-      imageSrc: '/src/assets/skills/communication.svg',
+      imageSrc: '/skills/communication.svg',
       glowColor: 'var(--color-header-blue)'
     },
     {
       title: 'Git',
-      imageSrc: '/src/assets/skills/git.svg',
+      imageSrc: '/skills/git.svg',
       glowColor: 'var(--color-aura-purple)'
     },
     {
       title: 'Jest',
-      imageSrc: '/src/assets/skills/jest.svg',
+      imageSrc: '/skills/jest.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
     {
       title: 'React Testing Library',
-      imageSrc: '/src/assets/skills/react-testing-library.svg',
+      imageSrc: '/skills/react-testing-library.svg',
       glowColor: 'var(--color-header-blue)'
     },
     {
       title: 'TensorFlow',
-      imageSrc: '/src/assets/skills/tensorflow.svg',
+      imageSrc: '/skills/tensorflow.svg',
       glowColor: 'var(--color-aura-purple)'
     },
     {
       title: 'Agile Development',
-      imageSrc: '/src/assets/skills/agile.svg',
+      imageSrc: '/skills/agile.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
     {
       title: 'Leadership',
-      imageSrc: '/src/assets/skills/leadership.svg',
+      imageSrc: '/skills/leadership.svg',
       glowColor: 'var(--color-header-blue)'
     },
     {
       title: 'REST APIs',
-      imageSrc: '/src/assets/skills/rest-api.svg',
+      imageSrc: '/skills/rest-api.svg',
       glowColor: 'var(--color-aura-purple)'
     },
     {
       title: 'Problem Solving',
-      imageSrc: '/src/assets/skills/problem-solving.svg',
+      imageSrc: '/skills/problem-solving.svg',
       glowColor: 'var(--color-ombre-pink)'
     },
   ];
