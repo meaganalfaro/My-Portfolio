@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import Project from '../components/Project';
-import altBackground from '../assets/images/alt-background.png';
 import './Projects.css';
 
 const Projects = () => {
