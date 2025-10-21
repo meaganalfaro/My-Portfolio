@@ -21,32 +21,28 @@ const ContactMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      const res = await fetch('/api/contact', {
+    try {
+      const res = await fetch('/api/send-email', {   
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: formData.message
         })
       });
+  
       if (!res.ok) throw new Error('Failed to submit form');
-      
+  
       // Reset form and show success
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
+      setFormData({ name: '', email: '', message: '' });
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 5000);
-      
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-
   };
+  
 
   return (
     <section id="contact" className="contact-section">
