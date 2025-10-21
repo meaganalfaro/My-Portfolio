@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-email/components": "^0.5.7",
+    "resend": "^6.2.2"
+  }
+}
