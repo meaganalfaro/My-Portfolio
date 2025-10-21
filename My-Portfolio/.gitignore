@@ -29,3 +29,11 @@ server/.env
 server/.env.*
 
 .vercel
+# dependencies
+node_modules/
+# builds
+dist/
+# env & local
+.env
+.vercel/
+.DS_Store
