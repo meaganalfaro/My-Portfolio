@@ -22,7 +22,7 @@ const ContactMe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/send-email', {   
+      const res = await fetch('/api/send-emails', {   
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
