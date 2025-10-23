@@ -119,6 +119,23 @@
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
+  /* Ensure cards stay within viewport */
+  max-width: min(400px, 30vw);
+  overflow: visible;
+}
+
+/* Mobile-first popup positioning */
+@media (max-width: 768px) {
+  .job-card-popup-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    width: 90vw;
+    padding: 0.5rem;
+    margin: 0 auto;
+  }
 }
 
 /* Web positioning - cards positioned directly over stars with viewport protection */
@@ -127,6 +144,9 @@
     /* Positioning handled by JavaScript inline styles */
     /* Add viewport protection for edge cases */
     max-width: min(400px, 30vw);
+    /* Ensure cards stay within viewport bounds */
+    position: absolute;
+    z-index: 9999;
   }
   
   /* Prevent cards from going off-screen on the right */
@@ -138,6 +158,10 @@
     left: 80% !important;
   }
   
+  .job-card-popup-fixed[style*="left: 7"] {
+    left: 75% !important;
+  }
+  
   /* Prevent cards from going off-screen on the left */
   .job-card-popup-fixed[style*="left: 1"] {
     left: 15% !important;
@@ -145,6 +169,14 @@
   
   .job-card-popup-fixed[style*="left: 2"] {
     left: 20% !important;
+  }
+  
+  .job-card-popup-fixed[style*="left: 3"] {
+    left: 25% !important;
+  }
+  
+  .job-card-popup-fixed[style*="left: 4"] {
+    left: 30% !important;
   }
 }
 
@@ -190,8 +222,8 @@
   }
   
   .constellation-star {
-    width: 20px; /* Smaller on tablets */
-    height: 20px; /* Smaller on tablets */
+    width: 28px; /* Larger touch target */
+    height: 28px; /* Larger touch target */
     box-shadow: 
       0 0 4px var(--color-shadow-beige),
       0 0 8px var(--color-shadow-beige),
@@ -217,8 +249,8 @@
   }
   
   .constellation-star {
-    width: 18px; /* Smaller on mobile */
-    height: 18px; /* Smaller on mobile */
+    width: 32px; /* Larger touch target for mobile */
+    height: 32px; /* Larger touch target for mobile */
     box-shadow: 
       0 0 3px var(--color-shadow-beige),
       0 0 6px var(--color-shadow-beige),
@@ -234,25 +266,25 @@
   }
 }
 
-/* Responsive star sizes */
+/* Responsive star sizes - Updated for better touch targets */
 @media (max-width: 1024px) {
   .constellation-star {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 }
 
 @media (max-width: 768px) {
   .constellation-star {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .constellation-star {
-    width: 18px;
-    height: 18px;
+    width: 32px;
+    height: 32px;
   }
 }
 

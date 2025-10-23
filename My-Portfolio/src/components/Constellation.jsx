@@ -9,9 +9,9 @@ const Constellation = ({ jobs }) => {
   const [selectedStarPosition, setSelectedStarPosition] = useState(null);
   const constellationRef = useRef(null);
   
-  // Check if device is mobile phone (screen width <= 480px)
+  // Check if device is mobile phone (screen width <= 768px)
   const isMobilePhone = () => {
-    return window.innerWidth <= 480;
+    return window.innerWidth <= 768;
   };
 
   // Dynamically generate star positions based on the number of jobs
@@ -54,13 +54,42 @@ const Constellation = ({ jobs }) => {
 
   const starPositions = generateStarPositions(jobs);
 
+  // Function to calculate safe positioning within viewport bounds
+  const calculateSafePosition = (position) => {
+    if (!position) return { top: '50%', left: '50%' };
+    
+    const viewportWidth = window.innerWidth;
+    const cardWidth = Math.min(400, viewportWidth * 0.3); // Card width estimation
+    const cardHalfWidth = cardWidth / 2;
+    
+    // Convert percentage to pixels for calculation
+    const leftPercent = parseFloat(position.left);
+    const leftPixels = (leftPercent / 100) * viewportWidth;
+    
+    // Check if card would go off-screen on the right
+    if (leftPixels + cardHalfWidth > viewportWidth - 20) {
+      // Position card to stay within bounds (20px margin)
+      const safeLeft = ((viewportWidth - cardWidth - 20) / viewportWidth) * 100;
+      return { ...position, left: `${safeLeft}%` };
+    }
+    
+    // Check if card would go off-screen on the left
+    if (leftPixels - cardHalfWidth < 20) {
+      // Position card to stay within bounds (20px margin)
+      const safeLeft = ((cardWidth + 20) / viewportWidth) * 100;
+      return { ...position, left: `${safeLeft}%` };
+    }
+    
+    return position;
+  };
+
   const handleStarClick = (jobId, starPosition) => {
     if (selectedJob === jobId) {
       setSelectedJob(null);
       setSelectedStarPosition(null);
     } else {
       setSelectedJob(jobId);
-      setSelectedStarPosition(starPosition);
+      setSelectedStarPosition(calculateSafePosition(starPosition));
     }
   };
 
@@ -95,6 +124,20 @@ const Constellation = ({ jobs }) => {
       document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [selectedJob]);
+
+  // Handle window resize to recalculate safe positions
+  useEffect(() => {
+    const handleResize = () => {
+      if (selectedJob !== null && selectedStarPosition) {
+        // Recalculate safe position on window resize
+        const newSafePosition = calculateSafePosition(selectedStarPosition);
+        setSelectedStarPosition(newSafePosition);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedJob, selectedStarPosition]);
 
   // Convert SVG coordinates to CSS percentages with offset adjustment
   const getStarPosition = (star) => {
@@ -158,10 +201,13 @@ const Constellation = ({ jobs }) => {
             left: '50%',
             transform: 'translate(-50%, -50%)'
           } : selectedStarPosition ? {
-            // Position over star on web/tablet
+            // Position over star on web/tablet with viewport protection
             top: selectedStarPosition.top,
             left: selectedStarPosition.left,
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            // Add viewport protection to prevent cards from going off-screen
+            maxWidth: 'min(400px, 30vw)',
+            right: 'auto'
           } : {
             // Fallback center
             top: '50%',
