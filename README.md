@@ -17,7 +17,8 @@ This portfolio is a living document of my journey, showcasing my projects, skill
 - **Framework:** React + JavaScript  
 - **Styling:** Tailwind CSS + custom themes  
 - **Bundler:** Vite    
-- **Hosting:** Self Hosting
+- **Hosting:** Vercel
+- **Email Handling** Resend
 
 ## 🚀 Live Site
 Check it out here: https://malfaro.com
